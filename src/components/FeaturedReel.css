@@ -1,0 +1,113 @@
+.reel-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.reel-text {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 40px;
+  max-width: 500px;
+}
+
+.reel-metadata {
+  display: flex;
+  gap: 32px;
+  padding: 24px;
+  margin-bottom: 40px;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.meta-val {
+  font-family: var(--font-head);
+  font-size: 1.5rem;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.meta-lab {
+  font-size: 0.8rem;
+  color: var(--accent-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.sound-control {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 24px;
+  color: #fff;
+  font-family: var(--font-head);
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: 1px solid var(--glass-border);
+  transition: var(--transition-smooth);
+}
+
+.sound-control:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--accent-primary);
+}
+
+.display-frame {
+  padding: 12px;
+  position: relative;
+}
+
+.video-container {
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.reel-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.frame-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, var(--accent-primary), transparent 70%);
+  opacity: 0.1;
+  pointer-events: none;
+  filter: blur(40px);
+}
+
+@media (max-width: 1024px) {
+  .reel-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 60px;
+  }
+  
+  .reel-text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .reel-metadata {
+    justify-content: center;
+  }
+  
+  .sound-control {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .meta-val {
+    font-size: 1.25rem;
+  }
+}

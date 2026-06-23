@@ -1,0 +1,164 @@
+.education-section.galactic-mode {
+  position: relative;
+  background: transparent;
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.edu-header-center {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.galactic-timeline {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.central-path {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, rgba(120, 100, 255, 0.3), transparent);
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.galactic-node {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  margin-bottom: 80px;
+  width: 50%;
+  z-index: 2;
+}
+
+.galactic-node.right {
+  margin-left: 50%;
+  justify-content: flex-start;
+}
+
+/* Central Glowing Point */
+.point-anchor {
+  position: absolute;
+  top: 40px;
+  z-index: 5;
+}
+
+.left .point-anchor { right: -10px; }
+.right .point-anchor { left: -10px; }
+
+.point-inner {
+  width: 10px;
+  height: 10px;
+  background: #000;
+  border: 2px solid #88f;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+.point-glow {
+  position: absolute;
+  inset: -8px;
+  background: rgba(120, 100, 255, 0.4);
+  border-radius: 50%;
+  filter: blur(8px);
+  animation: pulseNode 3s infinite;
+}
+
+@keyframes pulseNode {
+  0%, 100% { transform: scale(1); opacity: 0.4; }
+  50% { transform: scale(1.5); opacity: 0.8; }
+}
+
+/* Card Styling */
+.galactic-card {
+  width: 450px;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(10, 10, 15, 0.7);
+  border-radius: 12px;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.galactic-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(120, 100, 255, 0.3);
+}
+
+.left .galactic-card { margin-right: 40px; }
+.right .galactic-card { margin-left: 40px; }
+
+.card-meta {
+  margin-bottom: 16px;
+}
+
+.meta-date {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: #88f;
+}
+
+.inst-name {
+  font-family: var(--font-head);
+  font-size: 1.25rem;
+  color: #fff;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.degree-name {
+  font-size: 0.95rem;
+  color: var(--text-dim);
+  margin-bottom: 24px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.score-pill {
+  background: rgba(120, 100, 255, 0.1);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  border: 1px solid rgba(120, 100, 255, 0.2);
+}
+
+.loc-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  opacity: 0.6;
+}
+
+@media (max-width: 1024px) {
+  .central-path { left: 40px; }
+  .galactic-node { width: 100%; left: 0 !important; margin-left: 0 !important; justify-content: flex-start; padding-left: 80px; }
+  .galactic-card { width: 100%; }
+  .left .point-anchor, .right .point-anchor { left: 30px; }
+}
+
+@media (max-width: 600px) {
+  .central-path { left: 20px; }
+  .galactic-node { padding-left: 50px; margin-bottom: 40px; }
+  .left .point-anchor, .right .point-anchor { left: 10px; }
+  .galactic-card { padding: 20px; }
+}
