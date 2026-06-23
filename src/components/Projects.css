@@ -138,13 +138,3 @@
     font-size: 2.25rem;
   }
 }
-}
-
-.timeline-container::before {
-  left: 9px;
-}
-
-.timeline-content {
-  padding: 20px;
-}
-}
