@@ -27,6 +27,14 @@ const projects = [
     image: '/project_placeholder_3.png',
     description: 'High-fidelity RAG system enabling semantic intelligence from PDFs, Images (Vision), and Audio via 768-dim embeddings and a custom local vector engine for ultra-fast, privacy-first retrieval.',
     tech: ['React 19', 'Node.js', 'Gemini 2.5 Flash', 'Endee Vector DB']
+  },
+  {
+    id: 4,
+    name: 'FarmPortal - Digital Farm Management System',
+    category: 'Full Stack / Agriculture',
+    image: '/project_placeholder_4.png',
+    description: 'A comprehensive web application for farmers to manage their agricultural activities, track expenses, monitor market prices, and generate performance reports.',
+    tech: ['React.js', 'Vite', 'Node.js', 'Express', 'MongoDB']
   }
 ];
 
